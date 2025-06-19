@@ -2,13 +2,14 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      // <-- Thêm vào mảng imports
-      isGlobal: true, // Giúp ConfigModule có sẵn ở mọi nơi mà không cần import lại
+      isGlobal: true,
     }),
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],

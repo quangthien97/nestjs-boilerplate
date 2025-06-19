@@ -26,4 +26,4 @@ RUN npm install --only=production --legacy-peer-deps
 COPY --from=builder /app/dist ./dist
 
 EXPOSE 3001
-CMD ["node", "dist/main"]/Users/thien.daovq/Ecom/ne-cr-api/.dockerignore
+CMD ["node", "dist/main"]
