@@ -6,7 +6,7 @@ import { typeOrmConfigFactory } from './typeorm.config';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }), // đọc .env toàn app
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
